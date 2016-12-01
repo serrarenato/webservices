@@ -24,5 +24,18 @@ public class LivroRepository {
 		return listLivros;
 		
 	}
+	public List<Livro> listarLivros(Integer numeroDaPagina, Integer tamanhoDaPagina) {
+		List<Livro> listLivrosResult;
+		listLivrosResult = new ArrayList<Livro>();
+		int x=1;
+		for (Livro livro:listLivros){
+			if (x>tamanhoDaPagina)
+				break;
+			listLivrosResult.add(livro);
+			x++;
+		}
+		return listLivrosResult;
+		
+	}
 
 }
